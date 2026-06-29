@@ -1,0 +1,52 @@
+{
+  "name": "portfolio-os",
+  "version": "0.1.0",
+  "description": "Config-driven self-personalizing landing-page engine (the 5-level living landing page).",
+  "license": "MIT",
+  "author": "Shaurya Vardhan Shandilya",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./posthog": {
+      "types": "./dist/adapters/posthog.d.ts",
+      "import": "./dist/adapters/posthog.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "personalization",
+    "landing-page",
+    "ab-testing",
+    "feature-flags",
+    "cohort",
+    "posthog",
+    "conversion",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shauryalowkeygotaura/portfolio-os.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}
